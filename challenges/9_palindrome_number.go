@@ -1,14 +1,8 @@
 package challenges
 
-import (
-	"strconv"
-)
-
-// Given an integer x, return true if x is a 
+// Given an integer x, return true if x is a
 // palindrome
 // , and false otherwise.
-
- 
 
 // Example 1:
 
@@ -25,22 +19,32 @@ import (
 // Input: x = 10
 // Output: false
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
- 
+
+// func IsPalindrome(x int) bool {
+// 	stringX := strconv.Itoa(x)
+// 	var reversedstring string
+
+// 	for i := len(stringX); i > 0; i-- {
+// 		reversedstring += string(stringX[i-1])
+// 	}
+
+// 	intVersion, _ := strconv.Atoi(reversedstring)
+
+// 	return x == intVersion
+// }
 
 func IsPalindrome(x int) bool {
-	stringX := strconv.Itoa(x)
-	var reversedstring string
-
-	for i := len(stringX); i > 0; i-- {
-		reversedstring += string(stringX[i-1])
+	if x < 0 {
+		return false
 	}
 
-	intVersion, _ := strconv.Atoi(reversedstring)
+	original := x
+	reversed := 0
 
-	if x == intVersion {
-		return true
+	for x > 0 {
+		reversed = reversed*10 + x%10
+		x /= 10
 	}
 
-	return false
-
+	return original == reversed
 }
