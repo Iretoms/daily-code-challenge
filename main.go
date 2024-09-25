@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	// easy "github.com/Iretoms/daily-code-challenge/challenges"
-	"github.com/Iretoms/daily-code-challenge/dsa"
+	easy "github.com/Iretoms/daily-code-challenge/challenges"
+	// "github.com/Iretoms/daily-code-challenge/dsa"
 )
 
 func main() {
@@ -48,5 +48,6 @@ func main() {
 	// list := dsa.LinkedList{Head: nil, Length: 0}
 	// list.InsertAtHead(2)
 
-	fmt.Println(dsa.BinarySearch([]int{1, 2, 3, 5, 6, 7, 9}, 3))
+	// fmt.Println(dsa.BinarySearch([]int{1, 2, 3, 5, 6, 7, 9}, 3))
+	fmt.Println(easy.RemoveDuplicates([]int{1, 1, 2}))
 }
