@@ -49,5 +49,6 @@ func main() {
 	// list.InsertAtHead(2)
 
 	// fmt.Println(dsa.BinarySearch([]int{1, 2, 3, 5, 6, 7, 9}, 3))
-	fmt.Println(easy.RemoveDuplicates([]int{1, 1, 2}))
+	// fmt.Println(easy.RemoveDuplicates([]int{1, 1, 2}))
+	fmt.Println(easy.RemoveElement([]int{3,2,2,3}, 3))
 }
